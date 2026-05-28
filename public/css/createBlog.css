@@ -1,0 +1,127 @@
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background-color: #f4f4f4;
+    }
+
+    /* Navbar */
+    nav{
+      background-color: #222;
+      color: white;
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h1{
+      font-size: 28px;
+    }
+
+    nav ul{
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav ul li a{
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover{
+      color: #00bcd4;
+    }
+
+    /* Create Blog Form */
+    .container{
+      width: 90%;
+      max-width: 800px;
+      margin: 50px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .container h2{
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .form-group{
+      margin-bottom: 20px;
+    }
+
+    label{
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    input,
+    textarea{
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    textarea{
+      resize: vertical;
+      min-height: 200px;
+    }
+
+    input:focus,
+    textarea:focus{
+      border-color: #00bcd4;
+      outline: none;
+    }
+
+    .btn{
+      width: 100%;
+      padding: 14px;
+      background-color: #00bcd4;
+      border: none;
+      color: white;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover{
+      background-color: #0097a7;
+    }
+
+    /* Footer */
+    footer{
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px){
+
+      nav{
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .container{
+        padding: 25px;
+      }
+    }
