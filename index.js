@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const app = express();
 app.set("view engine", "ejs");
@@ -5,6 +6,7 @@ app.set("view engine", "ejs");
 app.use(express.static('public/css/'));
 const blogRoutes = require('./routes/blogRoute');
 const authRoutes = require('./routes/authRoute');
+const db = require('./model');
 
 app.use("",blogRoutes);
 app.use("",authRoutes);
