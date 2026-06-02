@@ -1,5 +1,6 @@
 const {Sequelize,DataTypes} = require('sequelize');
 const dbConfig = require('../config/dbConfig');
+const userModel = require('./userModel');
 
 const {database,user,password,host,port,dialect,pool} = dbConfig;
 
@@ -21,7 +22,7 @@ sequelize.authenticate()
 const db = {}
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
-
+db.users = userModel(sequelize,DataTypes);
 sequelize.sync({force: false}).then(()=>{
     console.log("Synced Done")
 });
